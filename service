@@ -1,0 +1,13 @@
+[Unit]
+Description=Disparador Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /root/disparador/disparo.py
+WorkingDirectory=/root/disparador
+StandardOutput=journal
+StandardError=journal
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
